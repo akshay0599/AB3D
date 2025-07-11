@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AB3D Immersive</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <script type=\"module\" src=\"https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js\"></script>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1 class="animate-text">Welcome to <span>AB3D</span></h1>
+      <p class="animate-text">Immersive 3D experiences. Visualize the future.</p>
+      <a href="#about" class="btn">Explore</a>
+    </div>
+  </header>
+
+  <section id="about" class="about">
+    <h2>What We Do</h2>
+    <p>
+      AB3D builds immersive 3D configurators, product visualizations, and virtual experiences for brands around the world.
+    </p>
+  </section>
+
+  <script src="script.js"></script>
+
+  <section id="portfolio" class="portfolio">
+    <h2>Our Work</h2>
+    <div class="gallery">
+      <div class="card"><img src="https://source.unsplash.com/400x300/?3d,model" alt="3D Model 1" /><p>Product Visual</p></div>
+      <div class="card"><img src="https://source.unsplash.com/400x300/?virtual,design" alt="3D Model 2" /><p>Interior Render</p></div>
+      <div class="card"><img src="https://source.unsplash.com/400x300/?technology,3d" alt="3D Model 3" /><p>Virtual Experience</p></div>
+    </div>
+  </section>
+
+  <section id="viewer" class="viewer">
+    <h2>3D Viewer</h2>
+    <model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+                  alt="A 3D model of an astronaut"
+                  auto-rotate camera-controls
+                  style="width: 100%; height: 500px; background: #eaeaea;"></model-viewer>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+</body>
+</html>
+
