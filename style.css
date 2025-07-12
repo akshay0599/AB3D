@@ -1,234 +1,33 @@
-.services {
-  background: #fff;
-  padding: 100px 20px;
-  text-align: center;
-}
-.services h2 {
-  font-size: 2.4rem;
-  margin-bottom: 40px;
-}
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  max-width: 1000px;
-  margin: auto;
-}
-.service-card {
-  background: #f7f7f7;
-  border-radius: 12px;
-  padding: 30px 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  transition: transform 0.3s;
-}
-.service-card h3 {
-  margin-bottom: 12px;
-  color: #222;
-}
-.service-card p {
-  color: #555;
-}
-.service-card:hover {
-  transform: translateY(-6px);
-}
-
-/* Reset & Base Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 body {
   font-family: 'Segoe UI', sans-serif;
-  line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #222;
-  scroll-behavior: smooth;
+  background-color: #0f0f0f;
+  color: #f0f0f0;
 }
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Navbar */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
+/* matte black sections */
+.services {
   background: #121212;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  padding: 15px 0;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  color: #f0f0f0;
 }
-.navbar a {
-  color: #f4f4f4;
-  font-weight: 500;
-  transition: color 0.3s ease;
+.service-card {
+  background: #1a1a1a;
+  color: #ccc;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
 }
-.navbar a:hover {
-  color: #00eaff;
-}
-
-/* Hero Section */
-.hero {
-  height: 100vh;
-  background: linear-gradient(to bottom right, #0f0c29, #302b63, #24243e);
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 80px 20px 20px;
-}
-.hero h1 {
-  font-size: 3rem;
-}
-.hero h1 span {
-  color: #00eaff;
-}
-.hero p {
-  font-size: 1.2rem;
-  margin: 20px 0;
-}
-.cta-btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background: #00eaff;
-  color: #000;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-.cta-btn:hover {
-  background: #00c2d1;
-}
-
-/* Section Styles */
-section {
-  padding: 100px 20px 60px;
-  text-align: center;
-}
-section h2 {
-  font-size: 2.4rem;
-  margin-bottom: 20px;
-  color: #222;
-}
-section p {
-  max-width: 700px;
-  margin: 0 auto;
-  font-size: 1.1rem;
-  color: #444;
-}
-
-/* 3D Viewer */
 .viewer model-viewer {
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  background: #eaeaea;
-  margin-top: 30px;
-}
-
-/* Portfolio Gallery */
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
-  margin-top: 40px;
+  background: #1a1a1a;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.05);
 }
 .card {
-  background: #fff;
-  width: 300px;
-  padding: 10px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  background: #1a1a1a;
+  color: #eee;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
 }
-.card img {
-  width: 100%;
-  border-radius: 10px;
-}
-.card p {
-  margin-top: 12px;
-  font-weight: bold;
-}
-.card:hover {
-  transform: translateY(-5px);
-}
-
-/* Contact Form */
-form {
-  max-width: 500px;
-  margin: 30px auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-form input, form textarea {
-  padding: 14px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
+form input,
 form textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-form button {
-  padding: 12px;
-  font-size: 1rem;
-  background: #00eaff;
-  border: none;
-  color: #000;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 6px;
-  transition: background 0.3s;
-}
-form button:hover {
-  background: #00c2d1;
+  background: #1a1a1a;
+  color: #fff;
+  border: 1px solid #444;
 }
 .contact .info {
-  margin-top: 30px;
-  font-size: 1rem;
-  color: #333;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .navbar {
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-  section {
-    padding: 80px 20px 40px;
-  }
-}
-footer a {
-  display: inline-block;
-  transition: transform 0.3s, color 0.3s;
-}
-footer a:hover {
-  transform: scale(1.1);
-  color: #ffffff;
-}
-.reveal.show {
-  animation: slideFadeIn 1s ease-out forwards;
-}
-@keyframes slideFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  color: #ccc;
 }
