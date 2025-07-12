@@ -31,3 +31,49 @@ form textarea {
 .contact .info {
   color: #ccc;
 }
+.founder {
+  background-color: #121212;
+  color: #f0f0f0;
+  padding: 100px 20px;
+}
+.founder-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.founder-photo {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.08);
+}
+.founder-text {
+  flex: 1;
+  max-width: 600px;
+}
+.founder-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #00eaff;
+}
+.founder-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.founder-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+.founder-text blockquote {
+  font-style: italic;
+  border-left: 4px solid #00eaff;
+  padding-left: 16px;
+  color: #aaa;
+}
