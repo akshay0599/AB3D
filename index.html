@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AB3D – 3D Visualization Studio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <style>
     * {
       box-sizing: border-box;
@@ -17,6 +18,26 @@
       color: #f5f5f5;
       line-height: 1.6;
       overflow-x: hidden;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: #0a0a0a;
+      border-bottom: 1px solid #222;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+    nav a {
+      color: #f5f5f5;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 500;
+    }
+    nav a:hover {
+      color: #ff6a00;
     }
     header, section, footer {
       padding: 5rem 2rem;
@@ -78,16 +99,34 @@
       from { opacity: 0; }
       to { opacity: 1; }
     }
+    model-viewer {
+      width: 100%;
+      height: 500px;
+      background: #111;
+      border-radius: 12px;
+      box-shadow: 0 0 24px rgba(255, 106, 0, 0.2);
+    }
   </style>
 </head>
 <body>
+
+  <nav>
+    <div><strong>AB3D</strong></div>
+    <div>
+      <a href="#what">What We Do</a>
+      <a href="#why">Why AB3D</a>
+      <a href="#industries">Industries</a>
+      <a href="#viewer">3D Viewer</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
   <header>
     <h1>AB3D – Imagination Meets Innovation</h1>
     <p>We Build Your World in 3D</p>
   </header>
 
-  <section class="reveal">
+  <section class="reveal" id="what">
     <h2>🔷 What We Do</h2>
     <ul>
       <li><span class="highlight">✔ Product 3D Visualization</span> – Photorealistic renders that bring your products to life.</li>
@@ -98,7 +137,7 @@
     </ul>
   </section>
 
-  <section class="reveal">
+  <section class="reveal" id="why">
     <h2>🧠 Why Choose AB3D?</h2>
     <ul>
       <li>💡 <strong>Creative Meets Technical</strong> – Where design meets engineering.</li>
@@ -108,7 +147,7 @@
     </ul>
   </section>
 
-  <section class="reveal">
+  <section class="reveal" id="industries">
     <h2>🛠 Industries We Work With</h2>
     <ul>
       <li>• Furniture & Interior Design</li>
@@ -119,7 +158,13 @@
     </ul>
   </section>
 
-  <section class="reveal">
+  <section class="reveal" id="viewer">
+    <h2>⌚ Explore Our Custom Watch in 3D</h2>
+    <model-viewer src="Wrist-Watch-3D%20Model.glb" alt="3D Watch Model" auto-rotate camera-controls ar shadow-intensity="1">
+    </model-viewer>
+  </section>
+
+  <section class="reveal" id="contact">
     <h2>🎯 Let’s Build Something Amazing</h2>
     <p>
       Whether you're launching a product, revamping your brand, or building the next-gen digital experience — <strong>AB3D is your creative 3D partner</strong>.
