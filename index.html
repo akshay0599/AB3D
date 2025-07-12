@@ -2,97 +2,114 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AB3D Studio</title>
-  <link rel="stylesheet" href="style.css" />
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AB3D – 3D Visualization Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #0a0a0a;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+    header, section, footer {
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    header h1 {
+      font-size: 3rem;
+      color: #ff6a00;
+    }
+    header p {
+      font-size: 1.25rem;
+      color: #ccc;
+    }
+    section h2 {
+      color: #ffffff;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    section ul li {
+      margin-bottom: 0.75rem;
+    }
+    .highlight {
+      color: #ff6a00;
+      font-weight: 600;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+    a {
+      color: #ff6a00;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
-  <nav class="navbar">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#viewer">3D Viewer</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <header class="hero" id="home">
-    <h1><span>AB3D</span> Studio</h1>
-    <p>Elevate Your Brand with Immersive 3D Visualization</p>
-    <a href="#viewer" class="cta-btn">View in 3D ↓</a>
+  <header>
+    <h1>AB3D – Imagination Meets Innovation</h1>
+    <p>We Build Your World in 3D</p>
   </header>
 
-  <section id="about" class="about">
-    <h2>About Us</h2>
-    <p>AB3D is a creative 3D visualization studio delivering realistic product demos, architectural walkthroughs, and interactive experiences. We specialize in real-time 3D web content for branding, marketing, and eCommerce.</p>
+  <section>
+    <h2>🔷 What We Do</h2>
+    <ul>
+      <li><span class="highlight">✔ Product 3D Visualization</span> – Photorealistic renders that bring your products to life.</li>
+      <li><span class="highlight">✔ Interactive 3D Configurators</span> – Real-time product interaction in the browser.</li>
+      <li><span class="highlight">✔ 3D for Web & AR</span> – Lightweight WebGL-ready 3D experiences.</li>
+      <li><span class="highlight">✔ Custom 3D Modeling & Digital Twins</span> – Precision modeling from watch to architecture.</li>
+      <li><span class="highlight">✔ 3D Animation & Storytelling</span> – Visual narratives to elevate your brand.</li>
+    </ul>
   </section>
 
-  <section id="viewer" class="viewer">
-    <h2>3D Product Viewer</h2>
-    <model-viewer src="Wrist-Watch-3D Model.glb"
-                  alt="A 3D model of a wrist watch"
-                  auto-rotate
-                  camera-controls
-                  background-color="#f0f0f0"
-                  style="width: 100%; height: 500px;">
-    </model-viewer>
+  <section>
+    <h2>🧠 Why Choose AB3D?</h2>
+    <ul>
+      <li>💡 <strong>Creative Meets Technical</strong> – Where design meets engineering.</li>
+      <li>⚡ <strong>Fast & Scalable</strong> – Built for performance and optimization.</li>
+      <li>🌐 <strong>End-to-End Workflow</strong> – From concept to deployment.</li>
+      <li>🔧 <strong>Custom-Built Solutions</strong> – Crafted to suit your exact needs.</li>
+    </ul>
   </section>
 
-  <section id="portfolio" class="portfolio">
-    <h2>Our Work</h2>
-    <div class="gallery">
-      <div class="card">
-        <img src="https://source.unsplash.com/400x300/?product,3d" alt="Product Render" />
-        <p>Product Visualization</p>
-      </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/400x300/?interior,render" alt="Interior Render" />
-        <p>Interior CGI</p>
-      </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/400x300/?virtual,reality" alt="Virtual Experience" />
-        <p>Virtual Experience</p>
-      </div>
-    </div>
+  <section>
+    <h2>🛠 Industries We Work With</h2>
+    <ul>
+      <li>• Furniture & Interior Design</li>
+      <li>• Consumer Products & Wearables</li>
+      <li>• Architecture & Real Estate</li>
+      <li>• Automotive & Industrial</li>
+      <li>• Jewelry & Watches</li>
+    </ul>
   </section>
 
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-    <div class="info">
-      <p><strong>Email:</strong> banerjeeremo2013@gmail.com</p>
-      <p><strong>Phone:</strong> +91 8638856674</p>
-      <p><strong>Address:</strong> 182/1J, Bosepukur Road, Kolkata, West Bengal - 700042</p>
-    </div>
+  <section>
+    <h2>🎯 Let’s Build Something Amazing</h2>
+    <p>
+      Whether you're launching a product, revamping your brand, or building the next-gen digital experience — <strong>AB3D is your creative 3D partner</strong>.
+    </p>
+    <p>
+      📩 <a href="mailto:hello@ab3d.in">hello@ab3d.in</a><br/>
+      🌍 <a href="http://www.ab3d.in" target="_blank">www.ab3d.in</a>
+    </p>
   </section>
+
+  <footer>
+    <p>Follow us on <a href="#">Instagram</a> • <a href="#">LinkedIn</a> • <a href="#">ArtStation</a> • <a href="#">GitHub</a></p>
+    <p>&copy; 2025 AB3D. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
-<section id="services" class="services">
-  <h2>Our Services</h2>
-  <div class="services-grid">
-    <div class="service-card">
-      <h3>3D Product Visualization</h3>
-      <p>Hyper-realistic renders and turntables for e-commerce, branding, and packaging presentations.</p>
-    </div>
-    <div class="service-card">
-      <h3>Architectural Visualization</h3>
-      <p>Interior and exterior visualizations for real estate, furniture, and walkthroughs.</p>
-    </div>
-    <div class="service-card">
-      <h3>Interactive 3D Web</h3>
-      <p>Web-based 3D viewers and configurators using <code>&lt;model-viewer&gt;</code>, Three.js, and AR-ready content.</p>
-    </div>
-    <div class="service-card">
-      <h3>Branding & Animation</h3>
-      <p>Animated 3D logo intros, explainer videos, and motion graphics to elevate brand identity.</p>
-    </div>
-  </div>
-</section>
-
