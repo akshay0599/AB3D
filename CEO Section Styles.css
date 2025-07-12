@@ -1,0 +1,81 @@
+
+/* === CEO Section Styles === */
+#ceo {
+  background: linear-gradient(to bottom right, #f8f9fa, #e0e0e0);
+  padding: 80px 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+#ceo h2 {
+  font-size: 3em;
+  color: #111;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.ceo-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.ceo-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 35px 60px rgba(0, 0, 0, 0.15);
+}
+
+.ceo-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease;
+}
+
+.ceo-card:hover .ceo-image {
+  transform: scale(1.05);
+}
+
+.ceo-name {
+  font-size: 2em;
+  color: #222;
+  margin: 10px 0 5px;
+}
+
+.ceo-title {
+  color: #888;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.ceo-bio {
+  color: #444;
+  font-size: 1.1em;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .ceo-card {
+    padding: 30px 20px;
+  }
+  .ceo-name {
+    font-size: 1.6em;
+  }
+  .ceo-bio {
+    font-size: 1em;
+  }
+}
