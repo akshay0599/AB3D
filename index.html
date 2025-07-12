@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AB3D Immersive Site</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+  <header class="hero">
+    <h1>Welcome to AB3D</h1>
+    <p>Immersive 3D experiences crafted with precision</p>
+    <a href="#portfolio">Explore Work ↓</a>
+  </header>
+
+  <section id="portfolio" class="portfolio">
+    <h2>Our Work</h2>
+    <div class="gallery">
+      <div class="card"><img src="https://source.unsplash.com/400x300/?3d,model" /><p>Product Visual</p></div>
+      <div class="card"><img src="https://source.unsplash.com/400x300/?virtual,design" /><p>Interior Render</p></div>
+      <div class="card"><img src="https://source.unsplash.com/400x300/?technology,3d" /><p>Virtual Experience</p></div>
+    </div>
+  </section>
+
+  <section id="viewer" class="viewer">
+    <h2>3D Viewer</h2>
+    <model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+                  alt="A 3D model of an astronaut"
+                  auto-rotate camera-controls
+                  style="width: 100%; height: 500px; background: #eaeaea;"></model-viewer>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <div class="info">
+      <p><strong>Email:</strong> banerjeeremo2013@gmail.com</p>
+      <p><strong>Phone:</strong> +91 8638856674</p>
+      <p><strong>Address:</strong> 182/1J, Bosepukur Road, Kolkata, West Bengal - 700042</p>
+    </div>
+  </section>
+</body>
+</html>
