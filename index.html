@@ -24,6 +24,35 @@
       color: var(--text);
       overflow-x: hidden;
     }
+
+    /* 🔄 Loader styles */
+    #loader {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      background: #0e0e0e;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    .spinner {
+      width: 60px;
+      height: 60px;
+      border: 6px solid #444;
+      border-top: 6px solid var(--primary);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    #content {
+      display: none;
+    }
+
     nav {
       position: sticky;
       top: 0;
@@ -45,6 +74,7 @@
     nav a:hover {
       color: var(--primary);
     }
+
     header {
       text-align: center;
       padding: 6rem 2rem 4rem;
@@ -59,6 +89,7 @@
       font-size: 1.2rem;
       color: #ccc;
     }
+
     section {
       padding: 4rem 2rem;
       max-width: 1000px;
@@ -71,6 +102,7 @@
       opacity: 1;
       transform: translateY(0);
     }
+
     section h2 {
       font-size: 2rem;
       color: var(--primary);
@@ -87,6 +119,7 @@
     ul li:hover {
       transform: scale(1.02);
     }
+
     model-viewer {
       width: 100%;
       height: 500px;
@@ -94,15 +127,7 @@
       border-radius: 12px;
       margin-top: 1rem;
     }
-    model-viewer::before {
-      content: "";
-      color: #888;
-      font-size: 1rem;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
+
     .contact p {
       line-height: 1.8;
     }
@@ -110,6 +135,7 @@
       color: var(--primary);
       text-decoration: none;
     }
+
     footer {
       text-align: center;
       padding: 2rem;
@@ -117,6 +143,7 @@
       background: #000;
       color: #888;
     }
+
     footer a {
       color: var(--primary);
       text-decoration: none;
@@ -127,6 +154,7 @@
       color: #ffffff;
       text-shadow: 0 0 10px rgba(0, 191, 255, 0.8);
     }
+
     .linkedin-float {
       position: fixed;
       bottom: 20px;
@@ -148,86 +176,100 @@
   </style>
 </head>
 <body>
-  <nav>
-    <div><strong style="color: var(--primary)">AB3D</strong></div>
-    <div>
-      <a href="#what">What We Do</a>
-      <a href="#why">Why AB3D</a>
-      <a href="#industries">Industries</a>
-      <a href="#viewer">3D Viewer</a>
-      <a href="#founder">Founder</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
 
-  <header>
-    <h1 id="typed-text"></h1>
-    <p>We Build Your World in 3D</p>
-  </header>
+  <!-- 🔄 Loader -->
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
 
-  <section class="reveal" id="what">
-    <h2>🔷 What We Do</h2>
-    <ul>
-      <li>✔ Product 3D Visualization</li>
-      <li>✔ Interactive 3D Configurators</li>
-      <li>✔ 3D for Web & AR</li>
-      <li>✔ Custom 3D Modeling & Digital Twins</li>
-      <li>✔ 3D Animation & Storytelling</li>
-    </ul>
-  </section>
+  <!-- ✅ Main Content -->
+  <div id="content">
+    <nav>
+      <div><strong style="color: var(--primary)">AB3D</strong></div>
+      <div>
+        <a href="#what">What We Do</a>
+        <a href="#why">Why AB3D</a>
+        <a href="#industries">Industries</a>
+        <a href="#viewer">3D Viewer</a>
+        <a href="#founder">Founder</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
 
-  <section class="reveal" id="why">
-    <h2>🧠 Why Choose AB3D?</h2>
-    <ul>
-      <li>💡 Creative Meets Technical</li>
-      <li>⚡ Fast & Scalable</li>
-      <li>🌐 End-to-End Workflow</li>
-      <li>🔧 Custom-Built Solutions</li>
-    </ul>
-  </section>
+    <header>
+      <h1 id="typed-text"></h1>
+      <p>We Build Your World in 3D</p>
+    </header>
 
-  <section class="reveal" id="industries">
-    <h2>🛠 Industries We Work With</h2>
-    <ul>
-      <li>• Furniture & Interior Design</li>
-      <li>• Consumer Products & Wearables</li>
-      <li>• Architecture & Real Estate</li>
-      <li>• Automotive & Industrial</li>
-      <li>• Jewelry & Watches</li>
-    </ul>
-  </section>
-
-  <section class="reveal" id="viewer">
-    <h2>⌚ Explore Our Custom Watch in 3D</h2>
-    <model-viewer src="Wrist-Watch-3D Model.glb" auto-rotate camera-controls ar shadow-intensity="1"></model-viewer>
-    <h2>🧭 Explore Our Second Product in 3D</h2>
-    <model-viewer src="product-2.glb" auto-rotate camera-controls ar shadow-intensity="1"></model-viewer>
-  </section>
-
-  <section class="reveal" id="founder">
-    <h2>👤 Meet the Founder</h2>
-    <div style="text-align:center">
-      <img src="akshay.jpg" alt="Akshay Banerjee" style="width:160px; height:160px; border-radius:50%; object-fit:cover; border:3px solid var(--primary); margin-bottom:1rem;" />
-      <h3>Akshay Banerjee</h3>
-      <p>3D Artist & Visualizer, Visionary, and Founder of AB3D.</p>
-    </div>
-       “At AB3D, my vision is to shape the future of immersive experiences — where 3D design empowers creativity, connection, and storytelling. Let’s build your world in 3D.”
-      — Akshay Banerjee, Founder
-    </div>
+    <section class="reveal" id="what">
+      <h2>🔷 What We Do</h2>
+      <ul>
+        <li>✔ Product 3D Visualization</li>
+        <li>✔ Interactive 3D Configurators</li>
+        <li>✔ 3D for Web & AR</li>
+        <li>✔ Custom 3D Modeling & Digital Twins</li>
+        <li>✔ 3D Animation & Storytelling</li>
+      </ul>
     </section>
 
-  <section class="reveal contact" id="contact">
-    <h2>📬 Contact AB3D</h2>
-    <p>
-      📩 <strong>Email:</strong> <a href="mailto:AB3D_Studio@outlook.com">AB3D_Studio@outlook.com</a><br />
-      📞 <strong>Phone:</strong> <a href="tel:+918638856674">+91 86388 56674</a><br />
-      📍 <strong>Address:</strong> Kolkata - West Bengal, India
-    </p>
-  </section>
-  <footer>
-    <p>&copy; 2025 AB3D. All rights reserved.</p>
-  </footer>
+    <section class="reveal" id="why">
+      <h2>🧠 Why Choose AB3D?</h2>
+      <ul>
+        <li>💡 Creative Meets Technical</li>
+        <li>⚡ Fast & Scalable</li>
+        <li>🌐 End-to-End Workflow</li>
+        <li>🔧 Custom-Built Solutions</li>
+      </ul>
+    </section>
 
+    <section class="reveal" id="industries">
+      <h2>🛠 Industries We Work With</h2>
+      <ul>
+        <li>• Furniture & Interior Design</li>
+        <li>• Consumer Products & Wearables</li>
+        <li>• Architecture & Real Estate</li>
+        <li>• Automotive & Industrial</li>
+        <li>• Jewelry & Watches</li>
+      </ul>
+    </section>
+
+    <section class="reveal" id="viewer">
+      <h2>⌚ Explore Our Custom Watch in 3D</h2>
+      <model-viewer src="Wrist-Watch-3D Model.glb" auto-rotate camera-controls ar shadow-intensity="1"></model-viewer>
+      <h2>🧭 Explore Our Second Product in 3D</h2>
+      <model-viewer src="product-2.glb" auto-rotate camera-controls ar shadow-intensity="1"></model-viewer>
+    </section>
+
+    <section class="reveal" id="founder">
+      <h2>👤 Meet the Founder</h2>
+      <div style="text-align:center">
+        <img src="akshay.jpg" alt="Akshay Banerjee" style="width:160px; height:160px; border-radius:50%; object-fit:cover; border:3px solid var(--primary); margin-bottom:1rem;" />
+        <h3>Akshay Banerjee</h3>
+        <p>3D Artist & Visualizer, Visionary, and Founder of AB3D.</p>
+      </div>
+      <p>“At AB3D, my vision is to shape the future of immersive experiences — where 3D design empowers creativity, connection, and storytelling.”<br>— Akshay Banerjee, Founder</p>
+    </section>
+
+    <section class="reveal contact" id="contact">
+      <h2>📬 Contact AB3D</h2>
+      <p>
+        📩 <strong>Email:</strong> <a href="mailto:AB3D_Studio@outlook.com">AB3D_Studio@outlook.com</a><br />
+        📞 <strong>Phone:</strong> <a href="tel:+918638856674">+91 86388 56674</a><br />
+        📍 <strong>Address:</strong> Kolkata - West Bengal, India
+      </p>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 AB3D. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- Floating LinkedIn -->
+  <a class="linkedin-float" href="https://www.linkedin.com/in/akshaybanerjee3d/" target="_blank">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+
+  <!-- Scripts -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <script>
     // Typing animation
@@ -240,7 +282,6 @@
         setTimeout(typeWriter, 60);
       }
     }
-    window.onload = typeWriter;
 
     // Reveal on scroll
     const reveals = document.querySelectorAll(".reveal");
@@ -253,7 +294,14 @@
         }
       }
     });
+
+    // Loader
+    window.addEventListener("load", () => {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("content").style.display = "block";
+      typeWriter();
+    });
   </script>
 </body>
 </html>
-</html>
+
