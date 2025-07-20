@@ -232,3 +232,20 @@ footer a:hover {
     transform: translateY(0);
   }
 }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #222;
+  box-shadow: 0 4px 20px rgba(0, 191, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
